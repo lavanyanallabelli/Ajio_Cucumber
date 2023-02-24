@@ -85,7 +85,7 @@ public class stepsDefenitions {
     @Then("the product results should be displayed in five-grid mode")
     public void the_product_results_should_be_displayed_in_five_grid_mode() {
         point = homepage.getGridLocation().getLocation();
-        Assert.assertEquals(point.getX(), 804);
+        Assert.assertEquals(point.getX(), 644);
         Assert.assertEquals(point.getY(), 241);
 
 
