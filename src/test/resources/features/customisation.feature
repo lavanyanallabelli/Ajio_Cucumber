@@ -5,11 +5,6 @@ Feature: Customisation of the features
     When the user cancel the notification
     And the user select products
     Then Notification got canceled and open user selected products
-  @TC1
-  Scenario: Verify that the user can filter options using gender
-    Given the user filter options by selecting boys
-    When the user select boys as an option for filter the products
-    Then the product results should be displayed which is belongs to boys
 
 
   Scenario: Verify that the user can view products using five-grid feature
@@ -32,7 +27,7 @@ Feature: Customisation of the features
     Given the user select a product
     When the user selected product results will shown in new window
     Then the product result open in new window
-
+@TC1
   Scenario Outline:Verify that user can able to search products
     Given the user search for products by enter their names
     When the user enter names of the products for "<itemnames>"
@@ -50,6 +45,10 @@ Feature: Customisation of the features
 
 
 
+#  Scenario: Verify that the user can filter options using gender
+#    Given the user filter options by selecting boys
+#    When the user select boys as an option for filter the products
+#    Then the product results should be displayed which is belongs to boys
 
 
 

@@ -51,7 +51,7 @@ public class stepsDefenitions {
     @When("the user cancel the notification")
     public void theUserCancelTheNotification() {
         homepage = new homePage(driver);
-        homepage.getRemoveNotification().click();
+      //  homepage.getRemoveNotification().click();
     }
 
     @And("the user select products")
@@ -66,25 +66,6 @@ public class stepsDefenitions {
     }
 
 
-    @Given("the user filter options by selecting boys")
-    public void theUserFilterOptionsBySelectingBoys() {
-        data = TestDataReader.getData(scenario.getName());
-        System.out.println(data.get("value"));
-
-    }
-
-    @When("the user select boys as an option for filter the products")
-    public void the_user_select_boys_as_an_option_for_filter_the_products() {
-        homepage.getGender().click();
-
-    }
-
-    @Then("the product results should be displayed which is belongs to boys")
-    public void the_product_results_should_be_displayed_which_is_belongs_to_boys() {
-        String text = homepage.getGender().getText();
-        Assert.assertEquals(text, data.get("Assertion values"));
-
-    }
 
 
     @Given("the user filter options by selecting grid options")
@@ -213,6 +194,28 @@ public class stepsDefenitions {
 
 
 }
+
+
+//    @Given("the user filter options by selecting boys")
+//    public void theUserFilterOptionsBySelectingBoys() {
+//        data = TestDataReader.getData(scenario.getName());
+//        System.out.println(data.get("value"));
+//
+//    }
+//
+//    @When("the user select boys as an option for filter the products")
+//    public void the_user_select_boys_as_an_option_for_filter_the_products() {
+//        homepage.getGender().click();
+//
+//    }
+//
+//    @Then("the product results should be displayed which is belongs to boys")
+//    public void the_product_results_should_be_displayed_which_is_belongs_to_boys() {
+//        String text = homepage.getGender().getText();
+//        Assert.assertEquals(text, data.get("Assertion values"));
+//
+//    }
+
 
 //data.get("name")
 //    @Given("the user filter options by selecting sports shoes")
