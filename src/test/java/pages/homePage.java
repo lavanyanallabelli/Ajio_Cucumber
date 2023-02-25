@@ -31,19 +31,6 @@ public class homePage {
     @Getter
     WebElement ClickOnShoes;
 
-    @FindBy(xpath = "//div[@class=\"facet-linkhead\"]")
-    @Getter
-    WebElement Gender;
-
-
-    @FindBy(xpath = "//div[@class=\"five-grid\"]")
-    @Getter
-    WebElement Grid;
-
-    @FindBy(xpath = "//div[@class=\"five-grid\"]")
-    @Getter
-    WebElement gridLocation;
-
     @FindBy(xpath = "//li[@class=\"breadcrumb-list\"]")
     @Getter
     WebElement ajioHomepage;
@@ -57,41 +44,26 @@ public class homePage {
     @Getter
     List<WebElement> sortBy;
 
-
-    @FindBy(xpath = "(//div[@class=\"preview\"])[2]")
-    @Getter
-    WebElement product;
-
     @FindBy(xpath = "//input[@name=\"searchVal\"]")
     @Getter
     WebElement Search;
 
-    @FindBy(xpath = "//div[@class=\"five-grid-container \"]")
-    @Getter
-    WebElement FivegridOption;
 
     @FindBy(xpath = "//div[@class=\"header2\"]")
     @Getter
     WebElement searchText;
 
+    @FindBy(xpath = "//a[@title=\"MEN\"]")
+    @Getter
+    WebElement men_cloths;
+
+    @FindBy(xpath = "(//div[@data-index=\"2\"])[13]")
+    @Getter
+    WebElement bags;
+
+    @FindBy(xpath = "//div[@class=\" info search-info\"]")
+    @Getter
+    WebElement getSearchText;
+
 }
-//    @FindBy(xpath = "(//div[@class=\"facet-linkfref \"])[6]")
-//    @Getter
-//    WebElement category;
-//
-//    @FindBy(xpath = "//label[@for=\"Women - Sports Shoes\"]")
-//    @Getter
-//    WebElement categoryText;
-//
-//    @FindBy(xpath = "//div[@class=\"facet-head \"]")
-//    @Getter
-//    WebElement price;
-//
-//    @FindBy(xpath = "(//div[@class=\"facet-linkfref \"])[13]")
-//    @Getter
-//    WebElement selectPrice;
-//
-//    @FindBy(xpath = "//label[@for=\"Rs.2001-2500\"]")
-//    @Getter
-//    WebElement getPriceText;
 

@@ -18,6 +18,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     }
 
 }
-//,tags = "@TC1"
+//,tags = "@smoke"
 
 //(parallel = true)

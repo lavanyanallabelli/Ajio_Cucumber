@@ -6,37 +6,47 @@ Feature: Customisation of the features
     And the user select products
     Then Notification got canceled and open user selected products
 
-
-  Scenario: Verify that the user can view products using five-grid feature
-    Given the user filter options by selecting grid options
-    When the user select five-grid option to view products
-    Then the product results should be displayed in five-grid mode
-
+  #testcase_1
   Scenario: Verify that the user can redirecting to home page after clicking on homepage button
     Given the user wants to view homepage of ajio
     When the user click on homepage button
     Then the current page redirected to home page
 
-
+#testcase_2
   Scenario: Verify that the user can filter products using relevance feature
     Given the user filter options by selecting relevance
     When the user select discount option to view products
     Then the product results should be displayed according to discount
 
-  Scenario: Verify that user can select a specific product
-    Given the user select a product
-    When the user selected product results will shown in new window
-    Then the product result open in new window
-@TC1
+#testcase_3
   Scenario Outline:Verify that user can able to search products
     Given the user search for products by enter their names
-    When the user enter names of the products for "<itemnames>"
-    And the user select five-grid option to view selected products
-    Then the search items should be displayed
+    When the user enter names of the products for "<item_names>"
+    Then the search items should be displayed as item as "<Result>"
   Examples:
-    |itemnames|
-    |shoe|
-    |watch|
+    |item_names| Result |
+    |shoe| Footwear     |
+    |watch|  Watches    |
+
+  #testcase_4
+  Scenario: Verify that the user can able to redirect to specified page
+    Given the user select men's clothing page
+    When the user click on the men's clothing page
+    Then the home page should redirected to men's clothing page
+
+
+    #testcase_5
+  Scenario: Verify that the user can able to redirect to selected product
+    Given the user select hand bags
+    When the user click on the hand bags
+    And sorted by using relevance
+    Then the home page should redirected to hand bags page
+
+    #testcase_6
+  Scenario: Verify that user can search for a product using search bar
+    Given the user search for products by enter item names
+    When the user search for a specific product
+    Then the required items should be shown
 
 
 
@@ -44,22 +54,3 @@ Feature: Customisation of the features
 
 
 
-
-#  Scenario: Verify that the user can filter options using gender
-#    Given the user filter options by selecting boys
-#    When the user select boys as an option for filter the products
-#    Then the product results should be displayed which is belongs to boys
-
-
-
-
-
-#  Scenario: Verify that the user can filter options using category
-#  Given the user filter options by selecting sports shoes
-#  When the user select sports shoes as an option to filter the products
-#  Then the product results should be displayed which is belongs to sports shoes
-
-#  Scenario: Verify that the user can filter options using price
-#    Given the user filter options by selecting price
-#    When the user select price Rs.2001-2500 (114) as an option to filter the products
-#    Then the product results should be displayed which is belongs to user selected price
