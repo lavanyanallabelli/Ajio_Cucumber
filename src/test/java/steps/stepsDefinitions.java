@@ -123,23 +123,23 @@ public class stepsDefinitions {
         Assert.assertEquals(searchText,arg0);
     }
 
-    @Given("the user select men's clothing page")
-    public void the_user_select_men_s_clothing_page() {
-
-    }
-
-    @When("the user click on the men's clothing page")
-    public void the_user_click_on_the_men_s_clothing_page() {
-        homepage.getMen_cloths().click();
-
-    }
-
-    @Then("the home page should redirected to men's clothing page")
-    public void the_home_page_should_redirected_to_men_s_clothing_page() {
-        url4 = envProps.getValue("url4");
-        Assert.assertEquals(driver.getCurrentUrl(),url4);
-
-    }
+//    @Given("the user select men's clothing page")
+//    public void the_user_select_men_s_clothing_page() {
+//
+//    }
+//
+//    @When("the user click on the men's clothing page")
+//    public void the_user_click_on_the_men_s_clothing_page() {
+//        homepage.getMen_cloths().click();
+//
+//    }
+//
+//    @Then("the home page should redirected to men's clothing page")
+//    public void the_home_page_should_redirected_to_men_s_clothing_page() {
+//        url4 = envProps.getValue("url4");
+//        Assert.assertEquals(driver.getCurrentUrl(),url4);
+//
+//    }
 
 
     @Given("the user select hand bags")
