@@ -187,6 +187,34 @@ public class stepsDefinitions {
         String searchText = homepage.getGetSearchText().getText();
         Assert.assertEquals(searchText,data.get("Assertion values"));
     }
+
+    @Given("the user select a product")
+    public void the_user_select_a_product() {
+//        data = TestDataReader.getData(scenario.getName());
+//        System.out.println(data.get("value"));
+
+
+    }
+
+    @When("the user selected product results will shown in new window")
+    public void the_user_selected_product_results_will_shown_in_new_window() {
+        homepage.getProduct().click();
+
+    }
+
+    @Then("the product result open in new window")
+    public void the_product_result_open_in_new_window() {
+        Set<String> windowset = driver.getWindowHandles();
+        List<String> windowList = new ArrayList<>(windowset);
+        driver.switchTo().window(windowList.get(1));
+        System.out.println(driver.getCurrentUrl());
+     driver.get(url);
+        url = envProps.getValue("url");
+        Assert.assertEquals(driver.getCurrentUrl(), url);
+
+
+    }
+
 }
 
 

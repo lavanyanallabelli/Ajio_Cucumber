@@ -34,7 +34,7 @@ Feature: Customisation of the features
     When the user click on the men's clothing page
     Then the home page should redirected to men's clothing page
 
-  @smoke
+
     #testcase_5
   Scenario: Verify that the user can able to redirect to selected product
     Given the user select hand bags
@@ -47,6 +47,12 @@ Feature: Customisation of the features
     Given the user search for products by enter item names
     When the user search for a specific product
     Then the required items should be shown
+  @smoke
+  #testcase_7
+    Scenario: Verify that user can select a specific product
+      Given the user select a product
+      When the user selected product results will shown in new window
+      Then the product result open in new window
 
 
 

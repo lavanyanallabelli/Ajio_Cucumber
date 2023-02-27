@@ -65,5 +65,9 @@ public class homePage {
     @Getter
     WebElement getSearchText;
 
+    @FindBy(xpath = "(//div[@class=\"preview\"])[2]")
+    @Getter
+    WebElement product;
+
 }
 
