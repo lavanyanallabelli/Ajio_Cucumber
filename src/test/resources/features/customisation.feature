@@ -29,10 +29,10 @@ Feature: Customisation of the features
     |watch|  Watches    |
 
   #testcase_4
-#  Scenario: Verify that the user can able to redirect to specified page
-#    Given the user select men's clothing page
-#    When the user click on the men's clothing page
-#    Then the home page should redirected to men's clothing page
+  Scenario: Verify that the user can able to redirect to specified page
+    Given the user select men's clothing page
+    When the user click on the men's clothing page
+    Then the home page should redirected to men's clothing page
 
   @smoke
     #testcase_5
