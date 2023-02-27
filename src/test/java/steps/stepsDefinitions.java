@@ -123,23 +123,23 @@ public class stepsDefinitions {
         Assert.assertEquals(searchText,arg0);
     }
 
-//    @Given("the user select men's clothing page")
-//    public void the_user_select_men_s_clothing_page() {
-//
-//    }
-//
-//    @When("the user click on the men's clothing page")
-//    public void the_user_click_on_the_men_s_clothing_page() {
-//        homepage.getMen_cloths().click();
-//
-//    }
-//
-//    @Then("the home page should redirected to men's clothing page")
-//    public void the_home_page_should_redirected_to_men_s_clothing_page() {
-//        url4 = envProps.getValue("url4");
-//        Assert.assertEquals(driver.getCurrentUrl(),url4);
-//
-//    }
+    @Given("the user select men's clothing page")
+    public void the_user_select_men_s_clothing_page() {
+
+    }
+
+    @When("the user click on the men's clothing page")
+    public void the_user_click_on_the_men_s_clothing_page() {
+        homepage.getMen_cloths().click();
+
+    }
+
+    @Then("the home page should redirected to men's clothing page")
+    public void the_home_page_should_redirected_to_men_s_clothing_page() {
+        url4 = envProps.getValue("url4");
+        Assert.assertEquals(driver.getCurrentUrl(),url4);
+
+    }
 
 
     @Given("the user select hand bags")
@@ -187,6 +187,34 @@ public class stepsDefinitions {
         String searchText = homepage.getGetSearchText().getText();
         Assert.assertEquals(searchText,data.get("Assertion values"));
     }
+
+    @Given("the user select a product")
+    public void the_user_select_a_product() {
+//        data = TestDataReader.getData(scenario.getName());
+//        System.out.println(data.get("value"));
+
+
+    }
+
+    @When("the user selected product results will shown in new window")
+    public void the_user_selected_product_results_will_shown_in_new_window() {
+        homepage.getProduct().click();
+
+    }
+
+    @Then("the product result open in new window")
+    public void the_product_result_open_in_new_window() {
+        Set<String> windowset = driver.getWindowHandles();
+        List<String> windowList = new ArrayList<>(windowset);
+        driver.switchTo().window(windowList.get(1));
+        System.out.println(driver.getCurrentUrl());
+     driver.get(url);
+        url = envProps.getValue("url");
+        Assert.assertEquals(driver.getCurrentUrl(), url);
+
+
+    }
+
 }
 
 
